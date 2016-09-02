@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ionic-range-input-in-android-weChat</title>
+    <link href="http://cdn.bootcss.com/ionic/1.1.0/css/ionic.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/ionic/1.1.0/js/ionic.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="range/z-range.js"></script>
+</head>
+
+<body ng-controller="IndexCtrl" style="text-align: center">
+
+<h3>ordinary range</h3>
+<div class="range range-calm">
+    <input type="range" min={{range.min}} max={{range.max}} step="100" ng-model="range.value">
+</div>
+<hr />
+<h3>my range</h3>
+<h4>{{'min:'+range1.min+' max:'+range1.max+' value:'+range1.value+' step:'+range1.step}}</h4>
+<z-range
+        z-value="range1.value"
+        z-id="1"
+        z-min="{{range1.min}}"
+        z-max="{{range1.max}}"
+        z-step="{{range1.step}}"
+></z-range>
+
+<h4>{{'min:'+range2.min+' max:'+range2.max+' value:'+range2.value+' step:'+range2.step}}</h4>
+<div style="width: 80%;margin: 0 auto">
+    <z-range
+            z-value="range2.value"
+            z-id="2"
+            z-min="{{range2.min}}"
+            z-max="{{range2.max}}"
+            z-step="{{range2.step}}"
+    ></z-range>
+</div>
+
+<h4>{{'min:'+range3.min+' max:'+range3.max+' value:'+range3.value+' step:'+range3.step}}</h4>
+<div style="width: 50%;">
+    <z-range
+            z-value="range3.value"
+            z-id="3"
+            z-min="{{range3.min}}"
+            z-max="{{range3.max}}"
+            z-step="{{range3.step}}"
+    ></z-range>
+</div>
+
+<h4>{{'min:'+range4.min+' max:'+range4.max+' value:'+range4.value+' step:'+range4.step}}</h4>
+<div style="width: 50%;margin-left: 50%">
+    <z-range
+            z-value="range4.value"
+            z-id="4"
+            z-min="{{range4.min}}"
+            z-max="{{range4.max}}"
+            z-step="{{range4.step}}"
+    ></z-range>
+</div>
+
+
+
+
+
+
+</body>
+</html>
